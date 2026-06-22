@@ -57,7 +57,7 @@ const About = () => {
               />
               <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-2xl shadow-secondary/20">
                 <img
-                  src="/images/welcome.jpg"
+                  src={`${import.meta.env.BASE_URL}images/welcome.jpg`}
                   alt="Welcome to Comfort Aircon"
                   loading="lazy"
                   decoding="async"
@@ -82,7 +82,7 @@ const About = () => {
               />
               <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-2xl shadow-secondary/20">
                 <img
-                  src="/images/vision.jpeg"
+                  src={`${import.meta.env.BASE_URL}images/vision.jpeg`}
                   alt="Mission and Vision"
                   loading="lazy"
                   decoding="async"

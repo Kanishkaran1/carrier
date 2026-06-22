@@ -39,7 +39,7 @@ const queryClient = new QueryClient();
 const RouteFallback = () => (
   <div className="min-h-[60vh] bg-cinema flex items-center justify-center" aria-busy="true">
     <img
-      src="/images/logo/ca_snowflake.webp"
+      src={`${import.meta.env.BASE_URL}images/logo/ca_snowflake.webp`}
       alt=""
       aria-hidden="true"
       width={316}

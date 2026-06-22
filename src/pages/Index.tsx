@@ -158,7 +158,7 @@ const CinematicHero = () => {
       {/* Ambient engineering footage — skipped entirely under reduced motion */}
       {!reduced && (
         <motion.video
-          src="/videos/AC_animation.mp4"
+          src={`${import.meta.env.BASE_URL}videos/AC_animation.mp4`}
           autoPlay
           muted
           loop
@@ -466,7 +466,7 @@ const Index = () => {
           >
             <div className="absolute -inset-3 rounded-3xl bg-gradient-to-br from-primary/15 via-transparent to-electric/10 blur-xl" aria-hidden="true" />
             <img
-              src="/images/welcome.jpg"
+              src={`${import.meta.env.BASE_URL}images/welcome.jpg`}
               alt="Comfort Aircon team"
               className="relative w-full h-[420px] object-cover rounded-2xl shadow-2xl shadow-secondary/20"
               loading="lazy"
@@ -685,7 +685,7 @@ const Index = () => {
               viewport={{ once: true, amount: 0.2 }}
             >
               <img
-                src="/images/ourserviceleft.webp"
+                src={`${import.meta.env.BASE_URL}images/ourserviceleft.webp`}
                 alt="AC service technician at work"
                 className="w-full h-full object-cover"
                 loading="lazy"

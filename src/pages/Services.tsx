@@ -74,7 +74,7 @@ const Services = () => {
                 />
                 <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-secondary/20">
                   <img
-                    src="/images/ac_service.jpg"
+                    src={`${import.meta.env.BASE_URL}images/ac_service.jpg`}
                     alt="AC Maintenance Tools"
                     loading="lazy"
                     decoding="async"
