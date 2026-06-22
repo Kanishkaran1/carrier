@@ -1,13 +1,13 @@
-import PageBanner from "@/components/PageBanner";
+﻿import PageBanner from "@/components/PageBanner";
 import ProductCard from "@/components/ProductCard";
 
 const products = [
   {
-    image: "/images/toshiba/ducted/toshibaduct1.png",
+    image: `${import.meta.env.BASE_URL}images/toshiba/ducted/toshibaduct1.png`,
     title: "Ducted Digital Inverter (1:1) Heat Pump",
   },
   {
-    image: "/images/toshiba/ducted/toshibaduct2.png",
+    image: `${import.meta.env.BASE_URL}images/toshiba/ducted/toshibaduct2.png`,
     title: "Ducted Stable Power Inverter : Cooling Only",
   },
 ];

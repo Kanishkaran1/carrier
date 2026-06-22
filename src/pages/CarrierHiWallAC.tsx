@@ -1,17 +1,17 @@
-import PageBanner from "@/components/PageBanner";
+﻿import PageBanner from "@/components/PageBanner";
 import ProductCard from "@/components/ProductCard";
 
 const products = [
   {
-    image: "/images/carrier/hiwall/hiwall1.jpg",
+    image: `${import.meta.env.BASE_URL}images/carrier/hiwall/hiwall1.jpg`,
     title: "Fixed Speed Hi-Wall Split A.C With R-22 Refrigerant",
   },
   {
-    image: "/images/carrier/hiwall/hiwall2.png",
+    image: `${import.meta.env.BASE_URL}images/carrier/hiwall/hiwall2.png`,
     title: "Fixed Speed Hi Wall Split AC : Cyclojet Type With R-22 Refrigerant",
   },
   {
-    image: "/images/carrier/hiwall/hiwall3.jpg",
+    image: `${import.meta.env.BASE_URL}images/carrier/hiwall/hiwall3.jpg`,
     title: "Inverter Hi-Wall Split A.C With R-410A Refrigerant",
   },
 ];

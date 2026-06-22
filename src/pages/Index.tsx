@@ -290,7 +290,7 @@ const brands = [
     tagline: "Inventor of modern air conditioning",
     description:
       "World-leading HVAC solutions trusted by businesses and homeowners globally. Window, Hi-Wall, Ducted, Cassette, Slimpak, Packaged & VRF systems.",
-    image: "/images/carrier.jpg",
+    image: `${import.meta.env.BASE_URL}images/carrier.jpg`,
     link: "/products/carrier/hi-wall-ac",
   },
   {
@@ -298,7 +298,7 @@ const brands = [
     tagline: "Japanese precision engineering",
     description:
       "Advanced inverter technology and ultra-quiet operation. Hi-Wall, Cassette, Ducted and VRF systems built for reliability in demanding climates.",
-    image: "/images/toshiba.jpg",
+    image: `${import.meta.env.BASE_URL}images/toshiba.jpg`,
     link: "/products/toshiba/hi-wall-ac",
   },
   {
@@ -306,7 +306,7 @@ const brands = [
     tagline: "Innovation-driven comfort technology",
     description:
       "Smart, energy-efficient climate solutions for modern living. Window, Hi-Wall units and a full range of home appliances.",
-    image: "/images/midea.jpg",
+    image: `${import.meta.env.BASE_URL}images/midea.jpg`,
     link: "/products/midea/hi-wall-ac",
   },
 ];

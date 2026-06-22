@@ -1,13 +1,13 @@
-import PageBanner from "@/components/PageBanner";
+﻿import PageBanner from "@/components/PageBanner";
 import ProductCard from "@/components/ProductCard";
 
 const products = [
   {
-    image: "/images/carrier/ducted/ducted1.jpg",
+    image: `${import.meta.env.BASE_URL}images/carrier/ducted/ducted1.jpg`,
     title: "Ducted : R22 Refrigerant",
   },
   {
-    image: "/images/carrier/ducted/ducted2.jpg",
+    image: `${import.meta.env.BASE_URL}images/carrier/ducted/ducted2.jpg`,
     title: "Ducted : R410a Refrigerant",
   },
 ];

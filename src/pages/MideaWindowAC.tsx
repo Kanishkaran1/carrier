@@ -1,9 +1,9 @@
-import PageBanner from "@/components/PageBanner";
+﻿import PageBanner from "@/components/PageBanner";
 import ProductCard from "@/components/ProductCard";
 
 const products = [
   {
-    image: "/images/midea/window/window1.jpg",
+    image: `${import.meta.env.BASE_URL}images/midea/window/window1.jpg`,
     title: "Midea Window AC",
   },
 ];

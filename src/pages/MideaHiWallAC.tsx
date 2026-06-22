@@ -1,13 +1,13 @@
-import PageBanner from "@/components/PageBanner";
+﻿import PageBanner from "@/components/PageBanner";
 import ProductCard from "@/components/ProductCard";
 
 const products = [
   {
-    image: "/images/midea/hiwall/hiwall1.jpg",
+    image: `${import.meta.env.BASE_URL}images/midea/hiwall/hiwall1.jpg`,
     title: "Midea Hi-Wall AC Model 1",
   },
   {
-    image: "/images/midea/hiwall/hiwall3.jpg",
+    image: `${import.meta.env.BASE_URL}images/midea/hiwall/hiwall3.jpg`,
     title: "Midea Hi-Wall AC Model 2",
   },
 ];

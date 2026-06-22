@@ -1,9 +1,9 @@
-import PageBanner from "@/components/PageBanner";
+﻿import PageBanner from "@/components/PageBanner";
 import ProductCard from "@/components/ProductCard";
 
 const products = [
   {
-    image: "/images/carrier/vrf/vrf.jpg",
+    image: `${import.meta.env.BASE_URL}images/carrier/vrf/vrf.jpg`,
     title: "VRF System",
   },
 ];

@@ -1,37 +1,37 @@
-import PageBanner from "@/components/PageBanner";
+﻿import PageBanner from "@/components/PageBanner";
 import ProductCard from "@/components/ProductCard";
 
 const products = [
   {
-    image: "/images/midea/homeappliances/washingmachine.jpg",
+    image: `${import.meta.env.BASE_URL}images/midea/homeappliances/washingmachine.jpg`,
     title: "Washing Machine",
   },
   {
-    image: "/images/midea/homeappliances/waterpurifier.jpg",
+    image: `${import.meta.env.BASE_URL}images/midea/homeappliances/waterpurifier.jpg`,
     title: "Water Purifier",
   },
   {
-    image: "/images/midea/homeappliances/waterheater.jpg",
+    image: `${import.meta.env.BASE_URL}images/midea/homeappliances/waterheater.jpg`,
     title: "Water Heater",
   },
   {
-    image: "/images/midea/homeappliances/microoven.jpg",
+    image: `${import.meta.env.BASE_URL}images/midea/homeappliances/microoven.jpg`,
     title: "Microwave Ovens",
   },
   {
-    image: "/images/midea/homeappliances/airpurifier.jpg",
+    image: `${import.meta.env.BASE_URL}images/midea/homeappliances/airpurifier.jpg`,
     title: "Air Purifier",
   },
   {
-    image: "/images/midea/homeappliances/dishwasher.jpg",
+    image: `${import.meta.env.BASE_URL}images/midea/homeappliances/dishwasher.jpg`,
     title: "Dish Washer",
   },
   {
-    image: "/images/midea/homeappliances/winecooler.jpg",
+    image: `${import.meta.env.BASE_URL}images/midea/homeappliances/winecooler.jpg`,
     title: "Wine Cooler",
   },
   {
-    image: "/images/midea/homeappliances/waterdispensers.jpg",
+    image: `${import.meta.env.BASE_URL}images/midea/homeappliances/waterdispensers.jpg`,
     title: "Water Dispensers",
   },
 ];

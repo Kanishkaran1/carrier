@@ -1,9 +1,9 @@
-import PageBanner from "@/components/PageBanner";
+﻿import PageBanner from "@/components/PageBanner";
 import ProductCard from "@/components/ProductCard";
 
 const products = [
   {
-    image: "/images/carrier/simplepak/simplepak.jpg",
+    image: `${import.meta.env.BASE_URL}images/carrier/simplepak/simplepak.jpg`,
     title: "Slimpac",
   },
 ];

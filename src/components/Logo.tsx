@@ -7,22 +7,24 @@ interface LogoProps {
   imgClassName?: string;
 }
 
+const base = import.meta.env.BASE_URL;
+
 const SOURCES = {
   full: {
-    src: "/images/logo/full_logo.png",
-    webp: "/images/logo/full_logo.webp",
+    src: `${base}images/logo/full_logo.png`,
+    webp: `${base}images/logo/full_logo.webp`,
     alt: "Comfort Aircon — Reach For The Sky",
     width: 364,
     height: 122,
   },
   mark: {
-    src: "/images/logo/ca_snowflake.png",
-    webp: "/images/logo/ca_snowflake.webp",
+    src: `${base}images/logo/ca_snowflake.png`,
+    webp: `${base}images/logo/ca_snowflake.webp`,
     alt: "Comfort Aircon",
     width: 316,
     height: 190,
   },
-} as const;
+};
 
 const Logo = ({ variant = "full", className = "", imgClassName = "" }: LogoProps) => {
   const { src, webp, alt, width, height } = SOURCES[variant];

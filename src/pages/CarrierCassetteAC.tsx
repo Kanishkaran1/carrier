@@ -1,13 +1,13 @@
-import PageBanner from "@/components/PageBanner";
+﻿import PageBanner from "@/components/PageBanner";
 import ProductCard from "@/components/ProductCard";
 
 const products = [
   {
-    image: "/images/carrier/cassette/cast1.jpg",
+    image: `${import.meta.env.BASE_URL}images/carrier/cassette/cast1.jpg`,
     title: "Cassette : R22 Refrigerant",
   },
   {
-    image: "/images/carrier/cassette/cast2.jpg",
+    image: `${import.meta.env.BASE_URL}images/carrier/cassette/cast2.jpg`,
     title: "Cassette : R410A Refrigerant",
   },
 ];

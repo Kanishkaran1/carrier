@@ -1,13 +1,13 @@
-import PageBanner from "@/components/PageBanner";
+﻿import PageBanner from "@/components/PageBanner";
 import ProductCard from "@/components/ProductCard";
 
 const products = [
   {
-    image: "/images/toshiba/cassette/toshibacassette1.jpg",
+    image: `${import.meta.env.BASE_URL}images/toshiba/cassette/toshibacassette1.jpg`,
     title: "Digital Inverter 4Way Cassette (1:1) Heat Pump",
   },
   {
-    image: "/images/toshiba/cassette/toshibacassete2.jpg",
+    image: `${import.meta.env.BASE_URL}images/toshiba/cassette/toshibacassete2.jpg`,
     title: "Stable Power Inverter : Cooling Only",
   },
 ];

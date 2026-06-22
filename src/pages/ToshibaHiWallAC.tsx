@@ -1,13 +1,13 @@
-import PageBanner from "@/components/PageBanner";
+﻿import PageBanner from "@/components/PageBanner";
 import ProductCard from "@/components/ProductCard";
 
 const products = [
   {
-    image: "/images/toshiba/hiwallac/toshibahiwall1.png",
+    image: `${import.meta.env.BASE_URL}images/toshiba/hiwallac/toshibahiwall1.png`,
     title: "Fixed Speed Hi-Wall Split A.C With R-410A Refrigerant",
   },
   {
-    image: "/images/toshiba/hiwallac/toshibahiwall2.png",
+    image: `${import.meta.env.BASE_URL}images/toshiba/hiwallac/toshibahiwall2.png`,
     title: "Inverter Hi-Wall Split A.C With R-410A Refrigerant",
   },
 ];

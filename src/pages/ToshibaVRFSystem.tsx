@@ -1,13 +1,13 @@
-import PageBanner from "@/components/PageBanner";
+﻿import PageBanner from "@/components/PageBanner";
 import ProductCard from "@/components/ProductCard";
 
 const products = [
   {
-    image: "/images/toshiba/vrf/vrf1.jpg",
+    image: `${import.meta.env.BASE_URL}images/toshiba/vrf/vrf1.jpg`,
     title: "Side Discharge",
   },
   {
-    image: "/images/toshiba/vrf/vrf2.jpg",
+    image: `${import.meta.env.BASE_URL}images/toshiba/vrf/vrf2.jpg`,
     title: "Top Discharge",
   },
 ];
