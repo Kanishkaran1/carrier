@@ -55,7 +55,7 @@ const App = () => (
       <MotionConfig reducedMotion="user">
         <Toaster />
         <Sonner />
-        <BrowserRouter>
+        <BrowserRouter basename="/carrier">
           <ResetScroll />
           <Suspense fallback={<RouteFallback />}>
             <Routes>
