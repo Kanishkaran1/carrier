@@ -1,0 +1,266 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   COMFORT AIRCON — Design System
+   Deep Comfort Blue · Electric HVAC Blue · Ice Cyan · Premium Silver
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+@layer base {
+  :root {
+    --background: 210 40% 99%;
+    --foreground: 222 47% 9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 9%;
+
+    /* Electric HVAC Blue — primary accent */
+    --primary: 197 96% 40%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Deep Comfort Blue — dark cinematic sections */
+    --secondary: 222 55% 8%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 214 28% 95%;
+    --muted-foreground: 217 18% 42%;
+
+    --accent: 197 96% 40%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 215 24% 89%;
+    --input: 215 24% 89%;
+    --ring: 197 96% 44%;
+
+    --radius: 0.75rem;
+
+    /* ── Extended palette ─────────────────────────────────────────── */
+    /* Ice Cyan — glows, gradients, cold-air light emission */
+    --ice: 190 100% 60%;
+    /* Electric Blue — mid-tone for gradients */
+    --electric: 205 100% 50%;
+    /* Premium Silver */
+    --steel: 214 18% 78%;
+    /* Deep gradient stops for cinematic backgrounds */
+    --abyss: 224 60% 5%;
+    --depth: 220 50% 11%;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 197 96% 44%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 197 96% 50%;
+    --primary-foreground: 222 55% 7%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 197 96% 50%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 197 96% 50%;
+    --sidebar-primary-foreground: 222 55% 7%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 197 96% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+    scroll-padding-top: 5rem;
+    scrollbar-color: hsl(220 30% 24%) hsl(var(--abyss));
+    scrollbar-width: thin;
+    background-color: hsl(var(--abyss));
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background: hsl(var(--primary) / 0.22);
+    color: inherit;
+  }
+
+  /* Accessible, on-brand focus rings everywhere */
+  :focus-visible {
+    outline: 2px solid hsl(var(--ring));
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  /* Subtle premium scrollbar (WebKit) */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--abyss));
+  }
+  ::-webkit-scrollbar-thumb {
+    background: hsl(220 30% 24%);
+    border-radius: 8px;
+    border: 2px solid hsl(var(--abyss));
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--primary) / 0.6);
+  }
+}
+
+/* ═══ Premium surface & light-emission utilities ═══════════════════════════ */
+
+@layer utilities {
+
+  /* ── Glass surfaces ───────────────────────────────────────────────────── */
+
+  /* Frosted glass for dark sections */
+  .glass-card {
+    background: linear-gradient(
+      160deg,
+      hsl(0 0% 100% / 0.07),
+      hsl(0 0% 100% / 0.03)
+    );
+    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(16px);
+    border: 1px solid hsl(0 0% 100% / 0.09);
+    box-shadow:
+      inset 0 1px 0 hsl(0 0% 100% / 0.08),
+      0 8px 32px hsl(var(--abyss) / 0.35);
+  }
+
+  /* Frosted glass for light sections */
+  .glass-light {
+    background: hsl(0 0% 100% / 0.65);
+    -webkit-backdrop-filter: blur(18px);
+    backdrop-filter: blur(18px);
+    border: 1px solid hsl(0 0% 100% / 0.75);
+    box-shadow:
+      inset 0 1px 0 hsl(0 0% 100% / 0.9),
+      0 8px 28px hsl(222 47% 9% / 0.07);
+  }
+
+  /* Navigation glass */
+  .glass-nav {
+    background: hsl(var(--abyss) / 0.72);
+    -webkit-backdrop-filter: blur(20px) saturate(1.4);
+    backdrop-filter: blur(20px) saturate(1.4);
+    border-bottom: 1px solid hsl(0 0% 100% / 0.07);
+  }
+
+  /* ── Cold-air light emission ──────────────────────────────────────────── */
+
+  .glow-ice {
+    box-shadow:
+      0 0 24px hsl(var(--ice) / 0.18),
+      0 0 64px hsl(var(--primary) / 0.10);
+  }
+
+  .glow-ice-strong {
+    box-shadow:
+      0 0 20px hsl(var(--ice) / 0.35),
+      0 0 70px hsl(var(--primary) / 0.22);
+  }
+
+  .text-ice-gradient {
+    background: linear-gradient(
+      100deg,
+      hsl(210 40% 98%) 20%,
+      hsl(var(--ice)) 60%,
+      hsl(var(--electric)) 90%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+
+  /* ── Cinematic backgrounds ────────────────────────────────────────────── */
+
+  .bg-cinema {
+    background:
+      radial-gradient(ellipse 80% 55% at 70% -10%, hsl(var(--primary) / 0.13), transparent 60%),
+      radial-gradient(ellipse 60% 45% at 15% 110%, hsl(var(--electric) / 0.09), transparent 55%),
+      linear-gradient(175deg, hsl(var(--abyss)), hsl(var(--depth)) 55%, hsl(var(--abyss)));
+  }
+
+  .dot-grid {
+    background-image: radial-gradient(
+      circle,
+      hsl(var(--ice) / 0.07) 1px,
+      transparent 1px
+    );
+    background-size: 28px 28px;
+  }
+
+  .grid-lines {
+    background-image:
+      linear-gradient(hsl(var(--ice) / 0.035) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--ice) / 0.035) 1px, transparent 1px);
+    background-size: 64px 64px;
+  }
+
+  /* Hairline gradient border (use on a wrapper with p-px) */
+  .border-gradient-ice {
+    background: linear-gradient(
+      140deg,
+      hsl(var(--ice) / 0.5),
+      hsl(0 0% 100% / 0.08) 35%,
+      hsl(0 0% 100% / 0.04) 65%,
+      hsl(var(--electric) / 0.35)
+    );
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* ═══ Motion safety ═════════════════════════════════════════════════════════
+   Hard global stop for users who prefer reduced motion. */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
