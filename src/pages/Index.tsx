@@ -8,6 +8,7 @@ import {
 } from "framer-motion";
 import AirflowCanvas from "@/components/AirflowCanvas";
 import TiltCard from "@/components/TiltCard";
+import VideoScrubHero from "@/components/VideoScrubHero";
 
 // Last section of the page — the form stack (react-hook-form, zod, emailjs)
 // stays out of the critical bundle.
@@ -415,7 +416,7 @@ const Index = () => {
     <div>
 
       {/* ── 1. HERO ───────────────────────────────────────────────────────── */}
-      <CinematicHero />
+      <VideoScrubHero />
 
       {/* ── 2. ENGINEERING STATS — floating glass band ───────────────────── */}
       <section className="bg-cinema relative overflow-hidden px-6 pb-20 -mt-px">
