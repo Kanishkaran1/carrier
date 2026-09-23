@@ -1,0 +1,14 @@
+# Nested Next.js experiment — not part of the deployed site.
+my-app/
+
+# Build output (Vercel builds from source).
+dist/
+
+# Local-only docs and planning artifacts.
+*.md
+!README.md
+
+# Never upload local env files — configure these in the Vercel dashboard.
+.env
+.env.*
+.claude/

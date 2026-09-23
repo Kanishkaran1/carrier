@@ -57,66 +57,102 @@ const ContactForm = () => {
     }
   };
 
+  const inputBase =
+    "w-full rounded-lg bg-white/[0.06] border px-4 py-3 text-sm text-white placeholder:text-white/40 transition-colors duration-200 focus:bg-white/[0.09] focus:border-ice/60 focus:outline-none";
+
   return (
     <div>
-      <h2 className="text-3xl font-bold mb-8">Quick Enquiry</h2>
+      <h2 className="text-2xl md:text-3xl font-black mb-8 uppercase tracking-tight text-white">
+        Quick Enquiry
+      </h2>
 
-      <form className="space-y-4" onSubmit={handleSubmit(onSubmit)}>
+      <form className="space-y-4" onSubmit={handleSubmit(onSubmit)} noValidate>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {/* Name */}
           <div className="space-y-1">
+            <label htmlFor="cf-name" className="sr-only">
+              Full Name
+            </label>
             <input
               {...register("name")}
+              id="cf-name"
               type="text"
               placeholder="Name"
-              className={`w-full bg-transparent border px-4 py-3 text-sm text-white ${
-                errors.name ? "border-red-500" : "border-white/30"
+              autoComplete="name"
+              className={`${inputBase} ${
+                errors.name ? "border-red-500" : "border-white/15"
               }`}
             />
             {errors.name && (
-              <p className="text-red-400 text-xs">{errors.name.message}</p>
+              <p className="text-red-400 text-xs" role="alert">
+                {errors.name.message}
+              </p>
             )}
           </div>
 
+          {/* Email */}
           <div className="space-y-1">
+            <label htmlFor="cf-email" className="sr-only">
+              Email Address
+            </label>
             <input
               {...register("email")}
+              id="cf-email"
               type="email"
               placeholder="Email Address"
-              className={`w-full bg-transparent border px-4 py-3 text-sm text-white ${
-                errors.email ? "border-red-500" : "border-white/30"
+              autoComplete="email"
+              className={`${inputBase} ${
+                errors.email ? "border-red-500" : "border-white/15"
               }`}
             />
             {errors.email && (
-              <p className="text-red-400 text-xs">{errors.email.message}</p>
+              <p className="text-red-400 text-xs" role="alert">
+                {errors.email.message}
+              </p>
             )}
           </div>
         </div>
 
+        {/* Phone */}
         <div className="space-y-1">
+          <label htmlFor="cf-phone" className="sr-only">
+            Phone Number
+          </label>
           <input
             {...register("phone")}
+            id="cf-phone"
             type="tel"
             placeholder="Phone"
-            className={`w-full bg-transparent border px-4 py-3 text-sm text-white ${
-              errors.phone ? "border-red-500" : "border-white/30"
+            autoComplete="tel"
+            className={`${inputBase} ${
+              errors.phone ? "border-red-500" : "border-white/15"
             }`}
           />
           {errors.phone && (
-            <p className="text-red-400 text-xs">{errors.phone.message}</p>
+            <p className="text-red-400 text-xs" role="alert">
+              {errors.phone.message}
+            </p>
           )}
         </div>
 
+        {/* Message */}
         <div className="space-y-1">
+          <label htmlFor="cf-message" className="sr-only">
+            Message
+          </label>
           <textarea
             {...register("message")}
+            id="cf-message"
             placeholder="Message"
             rows={5}
-            className={`w-full bg-transparent border px-4 py-3 text-sm text-white ${
-              errors.message ? "border-red-500" : "border-white/30"
+            className={`${inputBase} resize-none ${
+              errors.message ? "border-red-500" : "border-white/15"
             }`}
           />
           {errors.message && (
-            <p className="text-red-400 text-xs">{errors.message.message}</p>
+            <p className="text-red-400 text-xs" role="alert">
+              {errors.message.message}
+            </p>
           )}
         </div>
 
@@ -124,9 +160,9 @@ const ContactForm = () => {
           <button
             type="submit"
             disabled={isSending}
-            className="bg-primary px-6 py-2 text-sm font-semibold disabled:opacity-50"
+            className="rounded-lg bg-gradient-to-r from-primary to-electric px-8 py-3.5 text-sm font-bold uppercase tracking-wide text-white disabled:opacity-50 hover:shadow-[0_0_28px_hsl(var(--primary)/0.45)] active:scale-[0.97] transition-all duration-200"
           >
-            {isSending ? "Sending..." : "Submit"}
+            {isSending ? "Sending…" : "Send Enquiry"}
           </button>
         </div>
       </form>

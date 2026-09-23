@@ -1,0 +1,125 @@
+{
+  "_comment": "Single source of truth for per-route SEO. Consumed at runtime by src/components/Seo.tsx and at build time by scripts/postbuild.mjs (sitemap generation). Add a route here whenever you add one to src/App.tsx.",
+  "routes": [
+    {
+      "path": "/",
+      "title": "Comfort Aircon — Carrier, Toshiba & Midea AC Dealer in Puducherry",
+      "description": "Authorised dealer for Carrier, Toshiba and Midea air conditioning systems in Puducherry and Chennai. Sales, installation and AMC service since 1999.",
+      "priority": "1.0"
+    },
+    {
+      "path": "/about",
+      "title": "About Us — 25 Years of Air Conditioning Expertise | Comfort Aircon",
+      "description": "Established in 1999, Comfort Aircon has served 1000+ clients across banks, offices and industry with a specialised team of 70 HVAC experts.",
+      "priority": "0.7"
+    },
+    {
+      "path": "/products",
+      "title": "Products — Residential & Commercial Air Conditioners | Comfort Aircon",
+      "description": "Browse split, window, hi-wall, cassette, ducted, packaged and VRF air conditioning systems from Carrier, Toshiba and Midea.",
+      "priority": "0.9"
+    },
+    {
+      "path": "/products/carrier/window-ac",
+      "title": "Carrier Window AC — Models & Specifications | Comfort Aircon",
+      "description": "Carrier window air conditioners for homes and small offices. Authorised Carrier dealer in Puducherry — enquire for pricing and installation.",
+      "priority": "0.8"
+    },
+    {
+      "path": "/products/carrier/hi-wall-ac",
+      "title": "Carrier Hi-Wall Split AC — Models & Specifications | Comfort Aircon",
+      "description": "Carrier hi-wall split air conditioners with energy-efficient inverter technology. Authorised Carrier dealer in Puducherry and Chennai.",
+      "priority": "0.8"
+    },
+    {
+      "path": "/products/carrier/ducted-ac",
+      "title": "Carrier Ducted AC Systems | Comfort Aircon",
+      "description": "Carrier ductable air conditioning for offices, showrooms and commercial spaces. Design, supply and installation by Comfort Aircon.",
+      "priority": "0.8"
+    },
+    {
+      "path": "/products/carrier/cassette-ac",
+      "title": "Carrier Cassette AC Systems | Comfort Aircon",
+      "description": "Ceiling-mounted Carrier cassette air conditioners for uniform commercial cooling. Authorised dealer, installation and AMC available.",
+      "priority": "0.8"
+    },
+    {
+      "path": "/products/carrier/slimpak-ac",
+      "title": "Carrier Slimpak AC Systems | Comfort Aircon",
+      "description": "Carrier Slimpak air conditioning units — compact packaged cooling for commercial applications. Supplied and installed by Comfort Aircon.",
+      "priority": "0.8"
+    },
+    {
+      "path": "/products/carrier/packaged-ac",
+      "title": "Carrier Packaged AC Systems | Comfort Aircon",
+      "description": "Carrier packaged air conditioning units for high-capacity commercial and industrial cooling requirements.",
+      "priority": "0.8"
+    },
+    {
+      "path": "/products/carrier/vrf-system",
+      "title": "Carrier VRF Systems — Variable Refrigerant Flow | Comfort Aircon",
+      "description": "Carrier VRF air conditioning for multi-zone commercial buildings. Energy-efficient variable refrigerant flow design and installation.",
+      "priority": "0.8"
+    },
+    {
+      "path": "/products/toshiba/hi-wall-ac",
+      "title": "Toshiba Hi-Wall Split AC | Comfort Aircon",
+      "description": "Toshiba hi-wall split air conditioners with inverter technology. Authorised Toshiba dealer in Puducherry and Chennai.",
+      "priority": "0.8"
+    },
+    {
+      "path": "/products/toshiba/cassette-ac",
+      "title": "Toshiba Cassette AC Systems | Comfort Aircon",
+      "description": "Toshiba ceiling cassette air conditioners for offices, retail and institutional spaces. Supply, installation and service.",
+      "priority": "0.8"
+    },
+    {
+      "path": "/products/toshiba/ducted-ac",
+      "title": "Toshiba Ducted AC Systems | Comfort Aircon",
+      "description": "Toshiba ductable air conditioning systems for commercial spaces. Authorised dealer with full installation and AMC support.",
+      "priority": "0.8"
+    },
+    {
+      "path": "/products/toshiba/vrf-system",
+      "title": "Toshiba VRF Systems — Variable Refrigerant Flow | Comfort Aircon",
+      "description": "Toshiba VRF air conditioning for large multi-zone buildings. Precision climate control with high energy efficiency.",
+      "priority": "0.8"
+    },
+    {
+      "path": "/products/midea/window-ac",
+      "title": "Midea Window AC — Models & Specifications | Comfort Aircon",
+      "description": "Midea window air conditioners for homes and compact spaces. Authorised Midea dealer in Puducherry.",
+      "priority": "0.8"
+    },
+    {
+      "path": "/products/midea/hi-wall-ac",
+      "title": "Midea Hi-Wall Split AC | Comfort Aircon",
+      "description": "Midea hi-wall split air conditioners with energy-saving inverter technology. Sales, installation and service.",
+      "priority": "0.8"
+    },
+    {
+      "path": "/products/midea/home-appliances",
+      "title": "Midea Home Appliances — Washing Machines, Water Heaters & More | Comfort Aircon",
+      "description": "Midea home appliances including washing machines, dishwashers, water heaters, purifiers, air purifiers and wine coolers.",
+      "priority": "0.7"
+    },
+    {
+      "path": "/services",
+      "title": "AC Services — Installation, Maintenance & AMC | Comfort Aircon",
+      "description": "Preventive maintenance, servicing and annual maintenance contracts for air conditioning systems. Retain efficiency and extend product life.",
+      "priority": "0.9"
+    },
+    {
+      "path": "/clients",
+      "title": "Our Clients — Trusted by 1000+ Businesses | Comfort Aircon",
+      "description": "Comfort Aircon serves banks, hospitals, retail chains and infrastructure companies including SBI, Capgemini, TATA and Larsen & Toubro.",
+      "priority": "0.6"
+    },
+    {
+      "path": "/contact",
+      "title": "Contact Us — Free Quote & Site Visit | Comfort Aircon",
+      "description": "Get a free air conditioning quote and site visit in Puducherry. Call +91 98430 20458 or send an enquiry to admin@comfortair.co.in.",
+      "priority": "0.9"
+    }
+  ]
+}

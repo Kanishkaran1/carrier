@@ -1,41 +1,27 @@
 import PageBanner from "@/components/PageBanner";
+import ProductCard from "@/components/ProductCard";
 
 const products = [
   {
-    image: "/images/midea/hiwall/hiwall1.jpg",
+    image: `${import.meta.env.BASE_URL}images/midea/hiwall/hiwall1.jpg`,
     title: "Midea Hi-Wall AC Model 1",
   },
   {
-    image: "/images/midea/hiwall/hiwall3.jpg",
+    image: `${import.meta.env.BASE_URL}images/midea/hiwall/hiwall3.jpg`,
     title: "Midea Hi-Wall AC Model 2",
   },
 ];
 
 const MideaHiWallAC = () => {
   return (
-    <div>
+    <div className="bg-cinema text-white min-h-screen">
       <PageBanner title="Midea Hi-Wall AC" breadcrumb="Midea Hi-Wall AC" />
-      <section className="py-16 px-6 bg-muted/30">
-        <div className="container mx-auto">
+      <section className="py-24 px-6 relative overflow-hidden">
+        <div className="absolute inset-0 dot-grid pointer-events-none opacity-40" />
+        <div className="container mx-auto relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {products.map((product, index) => (
-              <div
-                key={index}
-                className="group bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 flex flex-col"
-              >
-                <div className="p-8 flex-1 flex items-center justify-center bg-white min-h-[300px]">
-                  <img
-                    src={product.image}
-                    alt={product.title}
-                    className="w-full h-auto object-contain max-h-[250px] transform group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                <div className="bg-[#004080] p-4 text-center">
-                  <h3 className="text-white font-medium text-sm md:text-base">
-                    {product.title}
-                  </h3>
-                </div>
-              </div>
+              <ProductCard key={index} image={product.image} title={product.title} />
             ))}
           </div>
         </div>
