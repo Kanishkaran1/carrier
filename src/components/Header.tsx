@@ -155,7 +155,7 @@ const Header = () => {
     <li key={label} className="relative">
       <Link
         to={path}
-        className={`relative block px-4 py-2 text-[12.5px] font-bold uppercase tracking-wider rounded-full transition-colors duration-200 ${
+        className={`relative block px-4 py-2 text-[12.5px] font-bold uppercase tracking-wider rounded-lg transition-colors duration-200 ${
           isActive(path)
             ? "text-white"
             : "text-white/60 hover:text-white hover:bg-white/5"
@@ -165,7 +165,7 @@ const Header = () => {
         {isActive(path) && (
           <motion.span
             layoutId="nav-pill"
-            className="absolute inset-0 -z-10 rounded-full bg-white/10 border border-white/10"
+            className="absolute inset-0 -z-10 rounded-lg bg-white/10 border border-white/10"
             transition={{ type: "spring", stiffness: 380, damping: 32 }}
           />
         )}
@@ -223,7 +223,7 @@ const Header = () => {
                     aria-expanded={productsOpen}
                     aria-haspopup="true"
                     onClick={() => setProductsOpen((o) => !o)}
-                    className={`relative flex items-center gap-1.5 px-4 py-2 text-[12.5px] font-bold uppercase tracking-wider rounded-full transition-colors duration-200 ${
+                    className={`relative flex items-center gap-1.5 px-4 py-2 text-[12.5px] font-bold uppercase tracking-wider rounded-lg transition-colors duration-200 ${
                       isProductsActive
                         ? "text-white"
                         : "text-white/60 hover:text-white hover:bg-white/5"
@@ -240,7 +240,7 @@ const Header = () => {
                     {isProductsActive && (
                       <motion.span
                         layoutId="nav-pill"
-                        className="absolute inset-0 -z-10 rounded-full bg-white/10 border border-white/10"
+                        className="absolute inset-0 -z-10 rounded-lg bg-white/10 border border-white/10"
                         transition={{ type: "spring", stiffness: 380, damping: 32 }}
                       />
                     )}
@@ -276,18 +276,18 @@ const Header = () => {
                                 key={brand.label}
                                 onMouseEnter={() => setActiveBrand(brand.label)}
                                 onFocus={() => setActiveBrand(brand.label)}
-                                className={`w-full flex items-center justify-between px-4 py-3 text-sm font-semibold transition-colors ${
+                                className={`w-full flex items-center justify-between px-4 py-3 text-sm font-semibold transition-colors border-l-2 ${
                                   activeBrand === brand.label
-                                    ? "bg-gradient-to-r from-primary/25 to-transparent text-ice"
-                                    : "text-white/65 hover:text-white hover:bg-white/5"
+                                    ? "bg-gradient-to-r from-primary/20 to-transparent text-ice border-primary"
+                                    : "text-white/65 hover:text-white hover:bg-white/5 border-transparent"
                                 }`}
                               >
                                 {brand.label}
                                 <ChevronDown
                                   size={12}
-                                  className={`-rotate-90 ${
+                                  className={`-rotate-90 transition-transform ${
                                     activeBrand === brand.label
-                                      ? "text-ice"
+                                      ? "text-ice translate-x-0.5"
                                       : "text-white/30"
                                   }`}
                                 />
@@ -311,10 +311,12 @@ const Header = () => {
                                       key={product.label}
                                       to={product.link}
                                       onClick={() => setProductsOpen(false)}
-                                      className="flex items-center gap-2.5 px-4 py-2.5 text-sm text-white/65 hover:text-ice hover:bg-white/5 transition-colors group"
+                                      className="flex items-center gap-2.5 px-4 py-2.5 text-sm text-white/65 hover:text-ice hover:bg-white/5 transition-all duration-200 group"
                                     >
-                                      <span className="w-1 h-1 rounded-full bg-ice/40 group-hover:bg-ice group-hover:shadow-[0_0_6px_hsl(var(--ice))] transition-all shrink-0" />
-                                      {product.label}
+                                      <span className="w-1.5 h-1.5 bg-ice/40 group-hover:bg-ice group-hover:shadow-[0_0_6px_hsl(var(--ice))] transition-all shrink-0" />
+                                      <span className="group-hover:translate-x-1.5 transition-transform duration-200">
+                                        {product.label}
+                                      </span>
                                     </Link>
                                   ))}
                               </>
@@ -336,7 +338,7 @@ const Header = () => {
                 href="tel:+919843020458"
                 className="hidden xl:flex items-center gap-2.5 text-white/70 hover:text-white transition-colors duration-200 group"
               >
-                <div className="w-9 h-9 rounded-full border border-white/15 flex items-center justify-center group-hover:border-ice/50 group-hover:shadow-[0_0_14px_hsl(var(--ice)/0.25)] transition-all duration-300">
+                <div className="w-9 h-9 rounded-lg border border-white/15 flex items-center justify-center group-hover:border-ice/50 group-hover:shadow-[0_0_14px_hsl(var(--ice)/0.25)] transition-all duration-300">
                   <Phone size={13} />
                 </div>
                 <div>
@@ -353,7 +355,7 @@ const Header = () => {
                 href="https://wa.me/919843020458"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-primary to-electric text-white px-6 py-2.5 text-sm font-bold shadow-[0_0_20px_hsl(var(--primary)/0.3)] hover:shadow-[0_0_32px_hsl(var(--primary)/0.5)] active:scale-[0.97] transition-all duration-200"
+                className="inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-primary to-electric text-white px-6 py-2.5 text-sm font-bold shadow-[0_0_20px_hsl(var(--primary)/0.3)] hover:shadow-[0_0_32px_hsl(var(--primary)/0.5)] active:scale-[0.97] transition-all duration-200"
               >
                 Free Quote
                 <ArrowRight size={14} />
@@ -563,7 +565,7 @@ const Header = () => {
                   href="https://wa.me/919843020458"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 w-full rounded-full bg-gradient-to-r from-primary to-electric text-white py-3.5 text-sm font-bold uppercase tracking-wide shadow-[0_0_22px_hsl(var(--primary)/0.35)] active:scale-[0.98] transition-transform"
+                  className="flex items-center justify-center gap-2 w-full rounded-lg bg-gradient-to-r from-primary to-electric text-white py-3.5 text-sm font-bold uppercase tracking-wide shadow-[0_0_22px_hsl(var(--primary)/0.35)] active:scale-[0.98] transition-transform"
                 >
                   Request a Free Quote
                   <ArrowRight size={14} />

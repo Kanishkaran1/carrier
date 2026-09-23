@@ -62,7 +62,9 @@ const ContactForm = () => {
 
   return (
     <div>
-      <h2 className="text-3xl font-bold mb-8 tracking-tight">Quick Enquiry</h2>
+      <h2 className="text-2xl md:text-3xl font-black mb-8 uppercase tracking-tight text-white">
+        Quick Enquiry
+      </h2>
 
       <form className="space-y-4" onSubmit={handleSubmit(onSubmit)} noValidate>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -158,7 +160,7 @@ const ContactForm = () => {
           <button
             type="submit"
             disabled={isSending}
-            className="rounded-full bg-gradient-to-r from-primary to-electric px-8 py-3 text-sm font-bold uppercase tracking-wide text-white disabled:opacity-50 hover:shadow-[0_0_24px_hsl(var(--primary)/0.45)] active:scale-[0.98] transition-all duration-200"
+            className="rounded-lg bg-gradient-to-r from-primary to-electric px-8 py-3.5 text-sm font-bold uppercase tracking-wide text-white disabled:opacity-50 hover:shadow-[0_0_28px_hsl(var(--primary)/0.45)] active:scale-[0.97] transition-all duration-200"
           >
             {isSending ? "Sending…" : "Send Enquiry"}
           </button>

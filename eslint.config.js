@@ -5,7 +5,10 @@ import reactRefresh from "eslint-plugin-react-refresh";
 import tseslint from "typescript-eslint";
 
 export default tseslint.config(
-  { ignores: ["dist"] },
+  // `my-app/` is a standalone Next.js project with its own eslint config, and
+  // its .next/ build artifacts are generated code. Linting them here produced
+  // 40 spurious errors that masked real problems in src/.
+  { ignores: ["dist", "my-app/**", "**/.next/**", "scripts/**"] },
   {
     extends: [js.configs.recommended, ...tseslint.configs.recommended],
     files: ["**/*.{ts,tsx}"],

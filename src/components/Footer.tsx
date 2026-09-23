@@ -64,14 +64,14 @@ const Footer = () => {
             <div className="relative flex flex-wrap items-center gap-3 shrink-0">
               <a
                 href="tel:+919843020458"
-                className="inline-flex items-center gap-2 rounded-full glass-card text-white px-6 py-3 text-sm font-bold hover:bg-white/10 active:scale-[0.98] transition-all"
+                className="inline-flex items-center gap-2 rounded-lg glass-card text-white px-6 py-3 text-sm font-bold hover:bg-white/10 active:scale-[0.98] transition-all"
               >
                 <Phone size={14} />
                 Call Now
               </a>
               <Link
                 to="/contact"
-                className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-primary to-electric text-white px-6 py-3 text-sm font-bold shadow-[0_0_22px_hsl(var(--primary)/0.35)] hover:shadow-[0_0_34px_hsl(var(--primary)/0.55)] active:scale-[0.98] transition-all"
+                className="inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-primary to-electric text-white px-6 py-3 text-sm font-bold shadow-[0_0_22px_hsl(var(--primary)/0.35)] hover:shadow-[0_0_34px_hsl(var(--primary)/0.55)] active:scale-[0.98] transition-all"
               >
                 Request a Quote
                 <ArrowRight size={14} />
@@ -91,7 +91,7 @@ const Footer = () => {
             Authorised dealer for Carrier, Toshiba and Midea — delivering
             premium HVAC solutions across Puducherry and Chennai since 1999.
           </p>
-          <span className="inline-block rounded-full text-[9px] uppercase tracking-[0.22em] text-ice font-bold border border-ice/30 px-3 py-1.5 glass-card">
+          <span className="inline-block rounded-md text-[9px] uppercase tracking-[0.22em] text-ice font-bold border border-ice/30 px-3 py-1.5 glass-card">
             Est. 1999
           </span>
 
@@ -124,10 +124,10 @@ const Footer = () => {
               <li key={link.name}>
                 <Link
                   to={link.path}
-                  className="flex items-center gap-2 text-sm text-white/45 hover:text-ice transition-colors group"
+                  className="flex items-center gap-2 text-sm text-white/45 hover:text-ice transition-all duration-200 group"
                 >
-                  <span className="w-1 h-1 rounded-full bg-ice/40 group-hover:bg-ice group-hover:shadow-[0_0_6px_hsl(var(--ice))] transition-all shrink-0" />
-                  {link.name}
+                  <span className="w-1.5 h-1.5 bg-ice/40 group-hover:bg-ice group-hover:shadow-[0_0_6px_hsl(var(--ice))] transition-all shrink-0" />
+                  <span className="group-hover:translate-x-1.5 transition-transform duration-200">{link.name}</span>
                 </Link>
               </li>
             ))}
@@ -150,10 +150,10 @@ const Footer = () => {
                     <li key={item.label}>
                       <Link
                         to={item.path}
-                        className="flex items-center gap-2 text-sm text-white/45 hover:text-ice transition-colors group"
+                        className="flex items-center gap-2 text-sm text-white/45 hover:text-ice transition-all duration-200 group"
                       >
-                        <span className="w-1 h-1 rounded-full bg-ice/40 group-hover:bg-ice group-hover:shadow-[0_0_6px_hsl(var(--ice))] transition-all shrink-0" />
-                        {item.label}
+                        <span className="w-1.5 h-1.5 bg-ice/40 group-hover:bg-ice group-hover:shadow-[0_0_6px_hsl(var(--ice))] transition-all shrink-0" />
+                        <span className="group-hover:translate-x-1.5 transition-transform duration-200">{item.label}</span>
                       </Link>
                     </li>
                   ))}
@@ -187,6 +187,7 @@ const Footer = () => {
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
+              className="grayscale contrast-[1.1] opacity-75 hover:grayscale-0 hover:opacity-100 transition-[filter,opacity] duration-500"
             />
           </div>
         </div>

@@ -31,6 +31,8 @@ interface TiltCardProps {
   glow?: boolean;
   /** Cursor-tracked white sheen / reflection. Default true. */
   glare?: boolean;
+  /** Peak alpha of the glare sheen. Default 0.10. */
+  glareMaxOpacity?: number;
 }
 
 const hasFinePointer = () =>
@@ -44,6 +46,7 @@ const TiltCard = ({
   lift = 6,
   glow = true,
   glare = true,
+  glareMaxOpacity = 0.1,
 }: TiltCardProps) => {
   const reduced = useReducedMotion();
   const innerRef = useRef<HTMLDivElement>(null);
@@ -119,7 +122,7 @@ const TiltCard = ({
             style={{
               opacity: "var(--tc-glare, 0)" as unknown as number,
               background:
-                "radial-gradient(200px circle at var(--tc-x) var(--tc-y), hsl(0 0% 100% / 0.10), transparent 55%)",
+                `radial-gradient(200px circle at var(--tc-x) var(--tc-y), hsl(0 0% 100% / ${glareMaxOpacity}), transparent 55%)`,
             }}
           />
         )}

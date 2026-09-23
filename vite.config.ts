@@ -4,7 +4,10 @@ import path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: "/carrier/",
+  // Served from the domain root (Vercel + custom domain).
+  // Was "/carrier/" for GitHub Pages project-site hosting — see DEPLOYMENT.md
+  // before changing: the router basename in src/App.tsx is derived from this.
+  base: "/",
   server: {
     host: "::",
     port: 8080,

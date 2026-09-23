@@ -1,4 +1,4 @@
-﻿import PageBanner from "@/components/PageBanner";
+import PageBanner from "@/components/PageBanner";
 import ProductCard from "@/components/ProductCard";
 
 const products = [
@@ -38,13 +38,14 @@ const products = [
 
 const MideaHomeAppliances = () => {
   return (
-    <div>
+    <div className="bg-cinema text-white min-h-screen">
       <PageBanner
         title="Midea Home Appliances"
         breadcrumb="Midea Home Appliances"
       />
-      <section className="py-16 px-6 bg-muted/30">
-        <div className="container mx-auto">
+      <section className="py-24 px-6 relative overflow-hidden">
+        <div className="absolute inset-0 dot-grid pointer-events-none opacity-40" />
+        <div className="container mx-auto relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {products.map((product) => (
               <ProductCard key={product.title} image={product.image} title={product.title} />

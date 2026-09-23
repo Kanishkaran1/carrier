@@ -1,8 +1,18 @@
 name: Deploy to GitHub Pages
 
+# DISABLED 2026-09-23 — the site now deploys to Vercel from the domain root.
+#
+# vite.config.ts sets `base: "/"`. A GitHub Pages *project* site is served from
+# /carrier/, so a build made with this config would 404 on every asset and show
+# a white screen. Auto-publishing is therefore switched off; the job can still
+# be started by hand from the Actions tab.
+#
+# To go back to GitHub Pages you must change BOTH:
+#   1. `base` in vite.config.ts  → "/carrier/"
+#   2. restore the `push` trigger below
+# (the router basename in src/App.tsx follows `base` automatically).
 on:
-  push:
-    branches: [master]
+  workflow_dispatch:
 
 permissions:
   contents: write

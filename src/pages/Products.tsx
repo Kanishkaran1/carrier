@@ -23,10 +23,12 @@ const categories = [
 
 const Products = () => {
   return (
-    <div>
+    <div className="bg-cinema text-white min-h-screen">
       <PageBanner title="Products" breadcrumb="Products" />
-      <section className="py-28 px-6">
-        <div className="container mx-auto">
+      <section className="py-28 px-6 relative overflow-hidden">
+        <div className="absolute inset-0 dot-grid pointer-events-none opacity-40" />
+        
+        <div className="container mx-auto relative z-10">
           <motion.div
             className="text-center mb-14"
             variants={fadeUp}
@@ -46,19 +48,21 @@ const Products = () => {
           >
             {categories.map((cat) => (
               <motion.div key={cat.title} variants={fadeUp} className="h-full">
-                <TiltCard className="bg-card border border-border rounded-2xl p-8 text-center h-full hover:border-primary/40">
-                <div className="w-20 h-20 mx-auto mb-5 rounded-2xl bg-gradient-to-br from-primary/[0.12] to-electric/[0.08] flex items-center justify-center group-hover:from-primary/20 group-hover:to-electric/15 group-hover:shadow-[0_0_24px_hsl(var(--primary)/0.25)] transition-all duration-300">
-                  <cat.icon size={40} className="text-primary" strokeWidth={2} />
+                <div className="rounded-2xl p-px border-gradient-ice h-full">
+                  <TiltCard className="glass-card rounded-2xl p-8 text-center h-full flex flex-col items-center justify-center relative overflow-hidden group">
+                    <div className="w-20 h-20 mx-auto mb-6 rounded-xl bg-gradient-to-br from-primary/20 to-electric/10 border border-primary/20 flex items-center justify-center transition-all duration-300 group-hover:from-primary group-hover:to-electric group-hover:shadow-[0_0_24px_hsl(var(--primary)/0.35)] group-hover:border-primary">
+                      <cat.icon size={36} className="text-ice transition-colors duration-300 group-hover:text-white" strokeWidth={1.8} />
+                    </div>
+                    <h3 className="text-xl font-black text-white mb-2 tracking-tight uppercase">{cat.title}</h3>
+                    <p className="text-white/60 text-sm mb-8 font-light max-w-xs">{cat.description}</p>
+                    <Link
+                      to={cat.link}
+                      className="inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-primary to-electric text-white px-7 py-3 text-xs font-bold uppercase tracking-wide shadow-[0_0_16px_hsl(var(--primary)/0.3)] hover:shadow-[0_0_28px_hsl(var(--primary)/0.5)] active:scale-[0.97] transition-all duration-200"
+                    >
+                      Learn More <ArrowRight size={14} />
+                    </Link>
+                  </TiltCard>
                 </div>
-                <h3 className="text-xl font-black text-secondary mb-2 tracking-tight">{cat.title}</h3>
-                <p className="text-muted-foreground text-sm mb-6">{cat.description}</p>
-                <Link
-                  to={cat.link}
-                  className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-primary to-electric text-white px-6 py-2.5 text-sm font-bold uppercase tracking-wide shadow-[0_0_16px_hsl(var(--primary)/0.3)] hover:shadow-[0_0_28px_hsl(var(--primary)/0.5)] active:scale-[0.97] transition-all duration-200"
-                >
-                  Learn More <ArrowRight size={14} />
-                </Link>
-                </TiltCard>
               </motion.div>
             ))}
           </motion.div>

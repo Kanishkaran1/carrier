@@ -21,7 +21,7 @@ const PageBanner = ({ title, breadcrumb }: PageBannerProps) => {
       <div className="container mx-auto relative z-10">
         {breadcrumb && (
           <nav aria-label="Breadcrumb" className="mb-4">
-            <ol className="inline-flex items-center gap-1.5 rounded-full glass-card px-4 py-1.5 text-xs text-white/45">
+            <ol className="inline-flex items-center gap-1.5 rounded-lg glass-card px-4 py-1.5 text-xs text-white/45">
               <li>
                 <Link to="/" className="hover:text-ice transition-colors">
                   Home

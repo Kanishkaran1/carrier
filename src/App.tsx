@@ -8,6 +8,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
 import Index from "./pages/Index";
 import ResetScroll from "@/components/ResetScroll";
+import Seo from "@/components/Seo";
 
 // Route-level code splitting — the landing page ships eagerly for instant LCP,
 // every other route loads on demand.
@@ -34,6 +35,12 @@ const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
 
+// Router basename is derived from Vite's `base` so the two can never drift
+// apart — a mismatch between them white-screens the whole site (see commit
+// 10768c8). Vite gives "/" at the domain root, or "/sub/" when hosted under a
+// sub-path; React Router wants that without the trailing slash.
+const BASENAME = import.meta.env.BASE_URL.replace(/\/$/, "") || "/";
+
 // Minimal route fallback — dark to match the fixed glass header, with a
 // subtly rotating brand mark so longer chunk loads don't feel inert.
 const RouteFallback = () => (
@@ -55,8 +62,9 @@ const App = () => (
       <MotionConfig reducedMotion="user">
         <Toaster />
         <Sonner />
-        <BrowserRouter basename="/carrier">
+        <BrowserRouter basename={BASENAME}>
           <ResetScroll />
+          <Seo />
           <Suspense fallback={<RouteFallback />}>
             <Routes>
               <Route element={<Layout />}>
